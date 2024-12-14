@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:vapp/pages/register.dart';
 
 import 'guest/guestHome.dart';
 
@@ -12,11 +13,11 @@ class VitaguideLandingPage extends StatelessWidget {
           // Background Image
           Positioned.fill(
             child: Image.asset(
-              'assets/images/bgr3.jpg', // Ensure this path matches your asset's location
+              'assets/images/bgr3.jpg', 
               fit: BoxFit.cover,
             ),
           ),
-          // Semi-transparent overlay for glass effect
+          
           Positioned.fill(
             child: Container(
               color: Colors.black.withOpacity(0.3),
@@ -26,12 +27,12 @@ class VitaguideLandingPage extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 12.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(16), // Same radius as Card
+                borderRadius: BorderRadius.circular(16), 
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2), // Translucent white for glass effect
+                      color: Colors.white.withOpacity(0.2), 
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
                         color: Colors.white.withOpacity(0.3),
@@ -44,7 +45,7 @@ class VitaguideLandingPage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            "Welcome To Vitaguide",
+                            "Login",
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
@@ -55,7 +56,14 @@ class VitaguideLandingPage extends StatelessWidget {
                           SizedBox(height: 20),
 
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => VitaguideRegister(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.red,
                               foregroundColor: Colors.white,
@@ -68,7 +76,14 @@ class VitaguideLandingPage extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => VitaguideRegister(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                               foregroundColor: Colors.black,
@@ -81,7 +96,14 @@ class VitaguideLandingPage extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => VitaguideRegister(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.grey[800],
                               foregroundColor: Colors.white,

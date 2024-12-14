@@ -9,13 +9,12 @@ class VitaguideInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(), // Enable dark mode
+      theme: ThemeData.dark(), 
       home: Scaffold(
         body: SingleChildScrollView(
           padding: EdgeInsets.only(left: 12,right: 12,bottom: 12,top:30),
           child: Column(
             children: [
-              // Example of reusing the VinfoCard widget
               VinfoCard(
                 vitaminName: "Vitamin B12 (Cobalamin)",
                 benefits: "Important for nerve function and red blood cell production.",

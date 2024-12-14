@@ -11,14 +11,14 @@ class VitaguideGuest extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
+         
           Positioned.fill(
             child: Image.asset(
-              'assets/images/bgr6.jpg', // Ensure this path matches your asset's location
+              'assets/images/bgr6.jpg', 
               fit: BoxFit.cover,
             ),
           ),
-          // Semi-transparent overlay for glass effect
+          
           Positioned.fill(
             child: Container(
               color: Colors.black.withOpacity(0.3),
@@ -28,13 +28,13 @@ class VitaguideGuest extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 12.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(16), // Same radius as Card
+                borderRadius: BorderRadius.circular(16), 
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(
-                          0.2), // Translucent white for glass effect
+                          0.2), 
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
                         color: Colors.white.withOpacity(0.3),
