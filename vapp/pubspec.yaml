@@ -62,6 +62,7 @@ flutter:
   assets:
      - assets/images/bgr3.jpg
      - assets/images/bgr6.jpg
+     - assets/images/vitaminsinfo.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
