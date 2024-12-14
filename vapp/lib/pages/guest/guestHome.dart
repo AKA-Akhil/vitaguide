@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-import 'guest/guestHome.dart';
+import '../landing.dart';
 
-class VitaguideLandingPage extends StatelessWidget {
+class VitaguideGuest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class VitaguideLandingPage extends StatelessWidget {
           // Background Image
           Positioned.fill(
             child: Image.asset(
-              'assets/images/bgr3.jpg', // Ensure this path matches your asset's location
+              'assets/images/bgr6.jpg', // Ensure this path matches your asset's location
               fit: BoxFit.cover,
             ),
           ),
@@ -31,7 +31,8 @@ class VitaguideLandingPage extends StatelessWidget {
                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2), // Translucent white for glass effect
+                      color: Colors.white.withOpacity(
+                          0.2), // Translucent white for glass effect
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
                         color: Colors.white.withOpacity(0.3),
@@ -53,7 +54,6 @@ class VitaguideLandingPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 20),
-
                           ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -64,24 +64,31 @@ class VitaguideLandingPage extends StatelessWidget {
                               ),
                               minimumSize: Size(double.infinity, 50),
                             ),
-                            child: Text("Register"),
+                            child: Text("Vitamin Information"),
                           ),
                           SizedBox(height: 10),
                           ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              foregroundColor: Colors.black,
+                              backgroundColor: Colors.blue,
+                              foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               minimumSize: Size(double.infinity, 50),
                             ),
-                            child: Text("Login as User"),
+                            child: Text("Vitamin Sideeffects"),
                           ),
                           SizedBox(height: 10),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => VitaguideLandingPage(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.grey[800],
                               foregroundColor: Colors.white,
@@ -90,28 +97,9 @@ class VitaguideLandingPage extends StatelessWidget {
                               ),
                               minimumSize: Size(double.infinity, 50),
                             ),
-                            child: Text("Login as Admin"),
+                            child: Text("Back"),
                           ),
                           SizedBox(height: 10),
-                          ElevatedButton(
-                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => VitaguideGuest(),
-                                ),
-                              );
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.amber,
-                              foregroundColor: Colors.black,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              minimumSize: Size(double.infinity, 50),
-                            ),
-                            child: Text("Visit Guest Home"),
-                          ),
                         ],
                       ),
                     ),
